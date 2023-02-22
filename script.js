@@ -250,3 +250,26 @@
 //   console.log(words);
 //   return words;
 // };
+//=======================================================
+//18.
+// https://www.codewars.com/kata/57eba158e8ca2c8aba0002a0/train/javascript
+// const makeParts = (arr, chunkSize) => {};
+//=======================================================
+//19.
+//https://www.codewars.com/kata/56fa3c5ce4d45d2a52001b3c/train/javascript
+// const xor = (a, b) => {
+//   if (a === true && b === true) {
+//     return false;
+//   } else if (a === true || b === true) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+//=======================================================
+//20.
+//https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097
+const century = (year) => {
+  return Math.ceil(year / 100);
+};
+century(1705);
