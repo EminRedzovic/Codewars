@@ -262,4 +262,49 @@ const century = (year) => {
 };
 // century(1705);
 //=======================================================
+//https://www.codewars.com/kata/5556282156230d0e5e000089/train/javascript
 //21.
+function DNAtoRNA(dna) {
+  nes = dna.split("");
+
+  for (let i = 0; i <= nes.length - 1; i++) {
+    if (nes[i] === "T") {
+      nes[i] = "U";
+    }
+  }
+  return nes.join("");
+}
+// DNAtoRNA("TTTT");
+//=======================================================
+//https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript
+//22.
+const rps = (p1, p2) => {
+  if (p1 == p2) {
+    return "Draw!";
+  } else if (p1 === "rock" && p2 != "paper") {
+    return "Player 1 won!";
+  } else if (p1 === "scissors" && p2 != "rock") {
+    return "Player 1 won!";
+  } else if (p1 === "paper" && p2 != "scissors") {
+    return "Player 1 won!";
+  } else {
+    return "Player 2 won!";
+  }
+};
+//=======================================================
+// Custom exercise to return initials
+//23.
+const initials = (fullName) => {
+  let initial = "";
+  fullName = fullName.split(" ");
+  if (fullName.length > 1) {
+    initial = initial + fullName[0][0] + fullName[1][0];
+    initial = initial.toUpperCase();
+  } else {
+    initial = initial + fullName[0][0] + fullName[0][1];
+    initial = initial.toUpperCase();
+  }
+  console.log(initial);
+  return initial;
+};
+initials("Emin Redzovic");
