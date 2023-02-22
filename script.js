@@ -231,3 +231,22 @@
 //   }
 // };
 // enough([10, 5, 5]);
+//=======================================================
+//17.
+//https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
+// const wave = (str) => {
+//   let lowercase = str.toLowerCase();
+//   const words = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === " ") {
+//       continue;
+//     }
+//     lowercase = lowercase.toLowerCase();
+//     let splited = lowercase.split("");
+//     splited[i] = splited[i].toUpperCase();
+//     lowercase = splited.join("");
+//     words.push(lowercase);
+//   }
+//   console.log(words);
+//   return words;
+// };
