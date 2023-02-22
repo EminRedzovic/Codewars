@@ -234,7 +234,10 @@ const enough = (cap, on, wait) => {
 //=======================================================
 //17.
 //https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
-
+const findNeedle = (haystack) => {
+  const index = haystack.indexOf("needle");
+  return "found the needle at position " + index;
+};
 //=======================================================
 //18.
 // https://www.codewars.com/kata/57eba158e8ca2c8aba0002a0/train/javascript
@@ -257,4 +260,6 @@ const xor = (a, b) => {
 const century = (year) => {
   return Math.ceil(year / 100);
 };
-century(1705);
+// century(1705);
+//=======================================================
+//21.
