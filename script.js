@@ -307,4 +307,24 @@ const initials = (fullName) => {
   console.log(initial);
   return initial;
 };
-initials("Emin Redzovic");
+// initials("Emin Redzovic");
+//=======================================================
+//24.
+//https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
+const removeSmallest = (numbers) => {
+  const copiedNumbers = [...numbers];
+
+  if (copiedNumbers.length === 0) {
+    return [];
+  }
+  const minNumber = Math.min(...copiedNumbers);
+
+  const minNumberIndex = copiedNumbers.findIndex((num) => num === minNumber);
+
+  copiedNumbers.splice(minNumberIndex, 1);
+
+  console.log(copiedNumbers);
+  return copiedNumbers;
+};
+
+// removeSmallest([1, 5, 2, 0, 5, 0]);
