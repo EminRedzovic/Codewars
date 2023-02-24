@@ -324,4 +324,44 @@ const removeSmallest = (numbers) => {
   return numbers;
 };
 
-removeSmallest([1, 5, 2, 0, 5, 0]);
+// removeSmallest([1, 5, 2, 0, 5, 0]);
+//=======================================================
+//25.
+//https://www.codewars.com/kata/5993fb6c4f5d9f770c0000f2/train/javascript
+const sumNoDuplicates = (numList) => {
+  const array1 = [];
+  let counter = 0;
+  for (let i = 0; i <= numList.length - 2; i++) {
+    for (let j = i + 1; j <= numList.length - 1; j++) {
+      if (numList[i] === numList[j]) {
+        array1.push(numList[i]);
+      }
+    }
+  }
+  for (let i = 0; i <= numList.length - 1; i++) {
+    if (!array1.includes(numList[i])) {
+      counter = counter + numList[i];
+    }
+  }
+  return counter;
+};
+// sumNoDuplicates([3, 4, 3, 6]);
+//=======================================================
+//https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/javascript
+//26.
+const reverseWords = (str) => {
+  str = str.split(" ");
+  let word = "";
+  let nesto = [];
+  for (let i = 0; i <= str.length - 1; i++) {
+    word = "";
+    for (let j = str[i].length - 1; j >= 0; j--) {
+      word = word + str[i][j];
+    }
+    nesto.push(word);
+  }
+  return nesto.join(" ");
+};
+// reverseWords("This is an example!");
+//=======================================================
+//27.
