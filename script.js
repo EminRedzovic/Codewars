@@ -365,3 +365,19 @@ const reverseWords = (str) => {
 // reverseWords("This is an example!");
 //=======================================================
 //27.
+//https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/javascript
+const descendingOrder = (n) => {
+  n = n + "";
+  n = n.split("");
+  for (let i = 0; i <= n.length - 1; i++) {
+    n[i] = parseInt(n[i]);
+  }
+  n.sort((a, b) => b - a);
+  for (let i = 0; i <= n.length - 1; i++) {
+    n[i] = n[i] + "";
+  }
+  n = n.join("");
+  n = parseInt(n);
+  return n;
+};
+// descendingOrder(525);
