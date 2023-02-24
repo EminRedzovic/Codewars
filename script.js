@@ -315,7 +315,7 @@ const removeSmallest = (numbers) => {
   if (numbers.length === 0) {
     return [];
   }
-  const minNumber = Math.min(...copiedNumbers);
+  const minNumber = Math.min(numbers);
 
   const minNumberIndex = numbers.findIndex((num) => num === minNumber);
 
@@ -381,3 +381,45 @@ const descendingOrder = (n) => {
   return n;
 };
 // descendingOrder(525);
+//=======================================================
+//28
+//https://www.codewars.com/kata/515e271a311df0350d00000f/train/javascript
+function squareSum(numbers) {
+  let count = 0;
+  numbers.forEach(function (item) {
+    count = count + item * item;
+  });
+  return count;
+}
+//=======================================================
+//29.
+//https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/javascript
+function evenOrOdd(number) {
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+//=======================================================
+//30.
+//https://www.codewars.com/kata/5ce9c1000bab0b001134f5af/train/javascript
+const quarterOf = (month) => {
+  if (month <= 3) {
+    return 1;
+  } else if (month <= 6) {
+    return 2;
+  } else if (month <= 9) {
+    return 3;
+  } else if (month <= 12) {
+    return 4;
+  }
+};
+//=======================================================
+//31.
+//https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript
+function solution(str) {
+  str = str.split("");
+  str = str.reverse("");
+  return str.join("");
+}
