@@ -418,8 +418,87 @@ const quarterOf = (month) => {
 //=======================================================
 //31.
 //https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/javascript
-function solution(str) {
+const solution = (str) => {
   str = str.split("");
   str = str.reverse("");
   return str.join("");
-}
+};
+//=======================================================
+//32.
+//https://www.codewars.com/kata/5f70c883e10f9e0001c89673/train/javascript
+const flip = (d, a) => {
+  if (d === "R") {
+    return a.sort((a, b) => a - b);
+  } else {
+    return a.sort((a, b) => b - a);
+  }
+};
+//=======================================================
+//33.
+//https://www.codewars.com/kata/5951d30ce99cf2467e000013/train/javascript
+const isPythagoreanTriple = (integers) => {
+  integers.sort((a, b) => a - b);
+  if (
+    integers[0] * integers[0] + integers[1] * integers[1] ===
+    integers[2] * integers[2]
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+//=======================================================
+//34.
+//https://www.codewars.com/kata/57cff961eca260b71900008f/train/javascript
+const isVow = (a) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  return a.map((item, index) => {
+    const char = String.fromCharCode(item);
+    if (vowels.includes(char)) {
+      return char;
+    } else {
+      return item;
+    }
+  });
+};
+//=======================================================
+//35.
+//https://www.codewars.com/kata/57356c55867b9b7a60000bd7/train/javascript
+const basicOp = (operation, value1, value2) => {
+  if (operation === "+") {
+    return value1 + value2;
+  } else if (operation === "-") {
+    return value1 - value2;
+  } else if (operation === "*") {
+    return value1 * value2;
+  } else if (operation === "/") {
+    return value1 / value2;
+  }
+};
+//=======================================================
+//36.
+const toBinary = (n) => {
+  let nesto = "";
+  if (n === 1) {
+    return 1;
+  }
+  while (true) {
+    if (n % 2 != 0) {
+      if (n == 0) {
+        break;
+      }
+      n = n - 1;
+      n = n / 2;
+      nesto = nesto + "1";
+    } else if (n % 2 === 0) {
+      if (n == 0) {
+        break;
+      }
+      n = n / 2;
+      nesto = nesto + "0";
+    }
+  }
+  nesto = nesto.split("").reverse().join("");
+  return Number(nesto);
+};
+toBinary(10);
