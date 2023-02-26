@@ -477,6 +477,7 @@ const basicOp = (operation, value1, value2) => {
 };
 //=======================================================
 //36.
+//https://www.codewars.com/kata/59fca81a5712f9fa4700159a/train/javascript
 const toBinary = (n) => {
   let nesto = "";
   if (n === 1) {
@@ -501,4 +502,48 @@ const toBinary = (n) => {
   nesto = nesto.split("").reverse().join("");
   return Number(nesto);
 };
-toBinary(10);
+// toBinary(10);
+//=======================================================
+// 37.
+//https://www.codewars.com/kata/58f8a3a27a5c28d92e000144/train/javascript
+const firstNonConsecutive = (arr) => {
+  let nesto;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (i != 0) {
+      if (arr[i] !== arr[i - 1] + 1) {
+        nesto = arr[i];
+        break;
+      }
+    }
+  }
+  if (nesto === undefined) {
+    return null;
+  } else {
+    return nesto;
+  }
+};
+
+// firstNonConsecutive([1, 3, 4, 6, 7, 8, 10]);
+//=======================================================
+//38.
+//https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/train/javascript
+const distinct = (a) => {
+  let array1 = [];
+  for (let i = 0; i <= a.length - 2; i++) {
+    for (let j = i + 1; j <= a.length - 1; j++) {
+      if (a[i] === a[j]) {
+        array1.push(a[i]);
+      }
+    }
+  }
+  let nesto;
+  for (let i = 0; i <= array1.length - 1; i++) {
+    nesto = a.findIndex((num) => num === array1[i]);
+
+    a.splice(nesto, 1);
+  }
+  return a;
+};
+distinct([1, 1, 2]);
+//=======================================================
+//39.
