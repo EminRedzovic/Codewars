@@ -547,3 +547,25 @@ const distinct = (a) => {
 distinct([1, 1, 2]);
 //=======================================================
 //39.
+//https://www.codewars.com/kata/562926c855ca9fdc4800005b/train/javascript
+const numberToPower = (number, power) => {
+  let nesto = 1;
+  for (let i = 0; i < power; i++) {
+    nesto = nesto * number;
+  }
+  return nesto;
+};
+//=======================================================
+//40.
+//https://www.codewars.com/kata/53d32bea2f2a21f666000256/train/javascript
+function largesta(n, array) {
+  const array1 = [];
+  array.sort((a, b) => b - a);
+  for (let i = 0; i < n; i++) {
+    array1.push(array[i]);
+  }
+  array1.sort((a, b) => a - b);
+  console.log(array1);
+  return array1;
+}
+largesta(2, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
